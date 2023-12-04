@@ -296,6 +296,14 @@ header {
     color: white;
     font-size: 20px;
     border: none;
+    width: 100%;
+    max-width: 240px;
+    transition: all 300ms ease;
+}
+
+.form__submit:hover {
+    background-color: transparent;
+    border: 2px solid #fff;
 }
 
 /*  PROJECTS  */
