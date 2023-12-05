@@ -197,7 +197,8 @@ header {
     border-radius: 20px;
     overflow: hidden;
     display: flex;
-    
+    opacity: 0;
+    z-index: -1;
 }
 
 .modal__half {
@@ -348,7 +349,6 @@ label {
     font-weight: 700;
     text-align: center;
     padding: 20px;
-
 }
 
 .modal__overlay--visible {
@@ -376,6 +376,11 @@ label {
     color: white;
     font-size: 36px;
     z-index: 300;
+}
+
+.showModal {
+    opacity: 1;
+    z-index: 1;
 }
 
 /*  PROJECTS  */
