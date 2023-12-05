@@ -494,7 +494,8 @@ footer {
 
 .footer__link,
 .copyright,
-.footer__logo {
+.footer__logo,
+.footer__contact {
     color: white;
 }
 
