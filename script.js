@@ -1,6 +1,18 @@
 const loading = document.querySelector('.modal__overlay--loading')
 const success = document.querySelector('.modal__overlay--success')
 
+let contrastToggle = false;
+
+function toggleContrast() {
+    contrastToggle = !contrastToggle;
+    if(contrastToggle) {
+        document.body.classList += ' dark-theme'
+    } else {
+        document.body.classList.remove('dark-theme')
+    }
+    
+}
+
 function contact(event) {
     event.preventDefault();
     loading.classList += ' modal__overlay--visible'
@@ -33,3 +45,6 @@ function toggleModal() {
 function closeModal() {
     document.body.classList.remove('showModal')
 }
+
+
+/* FINAL SECTION ON BACKGROUND ANIMATIONS 2:30  */

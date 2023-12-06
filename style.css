@@ -14,8 +14,13 @@ a {
     text-decoration: none;
 }
 
+b:hover {
+    cursor: pointer;
+}
+
 section {
     background-color: rgb(245, 245, 245);
+    transition: all 300ms ease;
 }
 
 button {
@@ -85,6 +90,22 @@ p {
     }
 }
 
+nav,
+.scroll,
+.header {
+    opacity: 1;
+    visibility: visible;
+    transition: all 600ms 800ms;
+}
+
+.showModal nav,
+.showModal .scroll,
+.showModal .header {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 400ms;
+}
+
 /*  NAVIGATION  */
 nav {
     display: flex;
@@ -124,8 +145,35 @@ nav {
     border-bottom: 4px solid #242424;
 }
 
-.darkMode {
-    border: none;
+.dark-theme .title,
+.dark-theme .logo,
+.dark-theme .nav__lists,
+.dark-theme .section__title,
+.dark-theme .nav__link,
+.dark-theme .fa-adjust,
+.dark-theme .header__para {
+    color: white;
+}
+
+.dark-theme .orange {
+    color: #F06449;
+}
+
+.dark-theme section {
+    background-color: #242424;
+}
+
+.dark-theme .scroll__icon {
+    border-color: white;
+}
+
+.dark-theme .scroll__icon:after {
+    background-color: white;
+}
+
+.dark-theme .mail__btn {
+    background-color: white;
+    color: #242424;
 }
 
 #landing-page {
@@ -202,14 +250,15 @@ header {
     border-radius: 20px;
     overflow: hidden;
     display: flex;
-    box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.55);
     visibility: hidden;
     z-index: -1;
+    transition: visibility 1s, z-index 1s, box-shadow 0.5s ease;
 }
 
 .showModal .modal{
     visibility: visible;
-    z-index: 100;
+    z-index: 60;
+    box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.55);
 }
 
 .modal__half {
@@ -219,12 +268,25 @@ header {
     flex-direction: column;
     justify-content: center;
     position: relative;
+    transition: all 300ms ease-in;
+}
+
+.showModal .modal__about,
+.showModal .modal__contact { /*have the about side slide in through the left*/
+    transform: translateX(0%);
 }
 
 .modal__about {
     background-color: rgb(245, 245, 245);
     display: flex;
     flex-direction: column;
+    transform: translateX(-110%);
+}
+
+.modal__contact {
+    background-color: #242424;
+    color: white;
+    transform: translateX(110%);
 }
 
 .modalLangugaes {
@@ -253,11 +315,6 @@ header {
 .language__img {
     width: 100%;
     transition: all 300ms ease;
-}
-
-.modal__contact {
-    background-color: #242424;
-    color: white;
 }
 
 .modal__title {
@@ -342,7 +399,7 @@ label {
     left: 0;
     width: 100%;
     height: 100%;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     z-index: -1;
@@ -364,6 +421,7 @@ label {
 
 .modal__overlay--visible {
     z-index: 1;
+    display: flex;
 }
 
 .fa-spinner {
