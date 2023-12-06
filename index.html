@@ -26,7 +26,9 @@
         <ul class="nav__lists">
           <li class="nav__list"><a href="" class="nav__link">About</a></li>
           <li class="nav__list"><a href="" class="nav__link">Projects</a></li>
-          <li class="nav__list"><a href="" class="nav__link">Contact</a></li>
+          <li class="nav__list modalToggle">
+            <a class="nav__link" onclick="toggleModal()">Contact</a>
+          </li>
           <li class="nav__list">
             <a href="" class="nav__link darkMode" onclick="darkModeToggle()"
               ><i class="fas fa-adjust"></i
@@ -45,7 +47,10 @@
             Here's a bit more <b class="orange">about me.</b>
           </p>
           <div class="social__links">
-            <a href="https://www.linkedin.com/in/kristine-bermoy-9252021bb/" target="_blank" class="social__link click"
+            <a
+              href="https://www.linkedin.com/in/kristine-bermoy-9252021bb/"
+              target="_blank"
+              class="social__link click"
               ><i class="fab fa-linkedin-in"></i
             ></a>
             <a
@@ -54,14 +59,17 @@
               class="social__link click"
               ><i class="fab fa-github"></i
             ></a>
-            <a href="./assets/kristine_bermoy_resume.pdf" target="_blank" class="social__link click"
+            <a
+              href="./assets/kristine_bermoy_resume.pdf"
+              target="_blank"
+              class="social__link click"
               ><i class="fas fa-file-pdf"></i
             ></a>
           </div>
         </div>
       </header>
-      <button class="mail__btn">
-        <i class="fas fa-envelope openModal"></i>
+      <button class="mail__btn click" onclick="toggleModal()">
+        <i class="fas fa-envelope"></i>
       </button>
       <a href="#projects" class="scroll">
         <div class="scroll__icon click"></div>
@@ -129,7 +137,7 @@
           </div>
         </div>
         <div class="modal__half modal__contact">
-          <i class="fas fa-times modal-exit click closeModal"></i>
+          <i class="fas fa-times modal-exit click" onclick="closeModal()"></i>
           <h3 class="modal__title modal__title--contact">Let's have a chat!</h3>
           <h4 class="modal__sub-title modal__subTitle-contact">
             I'm currently open to new opportunities
@@ -192,8 +200,16 @@
                     passowrd.
                   </p>
                   <div class="project__links">
-                    <a href="https://github.com/kbermoy/password-generator" target="_blank"><i class="fab fa-github white"></i></a>
-                    <a href="https://kbermoy.github.io/password-generator/" target="_blank"><i class="fas fa-link white"></i></a>
+                    <a
+                      href="https://github.com/kbermoy/password-generator"
+                      target="_blank"
+                      ><i class="fab fa-github white"></i
+                    ></a>
+                    <a
+                      href="https://kbermoy.github.io/password-generator/"
+                      target="_blank"
+                      ><i class="fas fa-link white"></i
+                    ></a>
                   </div>
                 </div>
               </div>
@@ -214,8 +230,16 @@
                     react landing pages for websites.
                   </p>
                   <div class="project__links">
-                    <a href="https://github.com/kbermoy/treact-frontend" target="_blank"><i class="fab fa-github white"></i></a>
-                    <a href="https://kbermoy.github.io/treact-frontend/" target="_blank"><i class="fas fa-link white"></i></a>
+                    <a
+                      href="https://github.com/kbermoy/treact-frontend"
+                      target="_blank"
+                      ><i class="fab fa-github white"></i
+                    ></a>
+                    <a
+                      href="https://kbermoy.github.io/treact-frontend/"
+                      target="_blank"
+                      ><i class="fas fa-link white"></i
+                    ></a>
                   </div>
                 </div>
               </div>
@@ -235,10 +259,13 @@
               class="footer__link"
               >LinkedIn</a
             >
-            <a href="mailto:kbermoy02@gmail.com" class="footer__contact footer__contact"
-              >Contact</a
+            <a class="footer__link" onclick="toggleModal()">Contact</a>
+            <a
+              href="./assets/kristine_bermoy_resume.pdf"
+              target="_blank"
+              class="footer__link"
+              >Resume</a
             >
-            <a href="./assets/kristine_bermoy_resume.pdf" class="footer__link">Resume</a>
           </div>
           <div class="copyright">Copyright © 2023 Kristine Bermoy</div>
         </div>
