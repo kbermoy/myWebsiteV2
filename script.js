@@ -56,7 +56,6 @@ function contact(event) {
  
 function toggleModal() {
     document.body.classList += ' showModal'
-    console.log('working click')
 }
 
 function closeModal() {
