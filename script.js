@@ -1,7 +1,24 @@
 const loading = document.querySelector('.modal__overlay--loading')
 const success = document.querySelector('.modal__overlay--success')
+const shapes = document.querySelectorAll('.shape')
 
 let contrastToggle = false;
+const scaleFactor = 1 / 20;
+
+function moveBackground(event) {
+    // get mouse position
+    const x = event.clientX * scaleFactor // divide by 20 allows the translate to not
+    const y = event.clientY * scaleFactor // move to much from its og position
+    // console.log(x, y) prints location of mouse everytime we move it
+    // we want to re-position the coordinates everytime we move the mouse
+
+    // loop every element in the shapes array, querySelectorAll returns an array
+    for(let i = 0; i < shapes.length; i++) {
+        const isOdd = i % 2 !== 0;
+        const boolInt = isOdd ? -1 : 1;
+        shapes[i].style.transform = `translate(${x * boolInt}px, ${y * boolInt}px)`
+    }
+}
 
 function toggleContrast() {
     contrastToggle = !contrastToggle;
@@ -45,6 +62,3 @@ function toggleModal() {
 function closeModal() {
     document.body.classList.remove('showModal')
 }
-
-
-/* FINAL SECTION ON BACKGROUND ANIMATIONS 2:30  */

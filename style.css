@@ -578,3 +578,64 @@ footer {
 .footer__link:hover {
     cursor: pointer;
 }
+
+/*
+    SHAPES
+    
+    shapes (0, 1, 2) on first row : top = 15vh
+    shapes on first column (0, 3, 6): left = 5vw
+
+    shapes (3, 4, 5) on 2nd row: top = 50vh
+    shapes (1, 4, 7) on 2nd column: left = 50vw
+
+    shapes (6, 7, 8) on 3rd row: top = 80vh
+    shapes (2, 5, 8) on 3rd column: left = 80vw
+*/
+.shape {
+    position: fixed;
+}
+
+.shape--0 {
+    top: 15vh;
+    left: 5vw;
+}
+
+.shape--1 {
+    top: 15vh;
+    left: 50vw;
+}
+
+.shape--2 {
+    top: 15vh;
+    left: 80vw;
+}
+
+.shape--3 {
+    top: 50vh;
+    left: 5vw;
+}
+
+.shape--4 {
+    top: 50vh;
+    left: 50vw;
+}
+
+.shape--5 {
+    top: 50vh;
+    left: 80vw;
+}
+
+.shape--6 {
+    top: 80vh;
+    left: 5vw;
+}
+
+.shape--7 {
+    top: 80vh;
+    left: 50vw;
+}
+
+.shape--8 {
+    top: 80vh;
+    left: 80vw;
+}
