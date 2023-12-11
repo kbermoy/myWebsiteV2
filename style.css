@@ -32,6 +32,10 @@ button {
     
 }
 
+.nocursor {
+    cursor: not-allowed;
+}
+
 .click {
     cursor: pointer;
     transition: all 300ms ease;
@@ -546,6 +550,12 @@ label {
 
 .white {
     color: white;
+    margin-left: 5px;
+}
+
+.project__bold {
+    font-weight: bolder;
+    color: #4bd543;
 }
 
 /*  FOOTER  */
