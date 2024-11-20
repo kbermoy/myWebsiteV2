@@ -32,6 +32,11 @@ button {
     
 }
 
+.emoi-icons {
+    width: 32px;
+    height: 32px;
+}
+
 .nocursor {
     cursor: not-allowed;
 }
@@ -219,7 +224,7 @@ header {
 }
 
 .social__link {
-    background-color: #64FFDA;
+    /* background-color: #64FFDA; */
     color: white;
     width: 32px;
     height: 32px;
